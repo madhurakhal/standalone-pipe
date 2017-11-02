@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HelloComponent } from './hello/hello.component';
 
+import { HelloService } from './hello.service';
 @NgModule({
   imports: [
     CommonModule
@@ -12,7 +13,8 @@ import { HelloComponent } from './hello/hello.component';
 export class LibexModule {
   static forRoot() {
     return {
-      ngModule: LibexModule
+      ngModule: LibexModule,
+      providers: [HelloService]
     };
   }
 }
